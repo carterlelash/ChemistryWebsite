@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule, Routes } from '@angular/router';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -15,16 +14,7 @@ import { PostsComponent } from './posts/posts.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { HomeworkComponent } from './homework/homework.component';
 import { ExtrasComponent } from './extras/extras.component';
-import {MatGridList, MatGridListModule} from '@angular/material/grid-list';
-import { HomeComponent } from './home/home.component';
-import { MatCard, MatCardModule } from '@angular/material/card';
-
 // Add any other Angular Material modules you need
-
-const routes: Routes = [
-  { path: 'home', component: AppComponent },
-  { path: 'resources', component: ResourcesComponent },
-]
 
 @NgModule({
   declarations: [
@@ -33,8 +23,7 @@ const routes: Routes = [
     PostsComponent,
     CalendarComponent,
     HomeworkComponent,
-    ExtrasComponent,
-    HomeComponent
+    ExtrasComponent
   ],
   imports: [
     BrowserModule,
@@ -45,15 +34,11 @@ const routes: Routes = [
     MatInputModule,
     MatIconModule,
     MatDatepickerModule,
-    MatGridListModule,
-    MatCardModule,
-    RouterModule.forRoot(routes),
     // Add any other Angular Material modules here
-  ],
-  exports: [
-    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+}

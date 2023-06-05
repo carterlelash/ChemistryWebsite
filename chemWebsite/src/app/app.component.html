@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>
+    <mat-toolbar color="primary" id = "toolbar">
+      <img src="assets/chemistryIcon.png" alt="My Icon" id="icon-image">
+      <span id = "title">Chemistry Website</span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="toggleCalendar()">
+        <mat-icon>today</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" (click)="toggleHomework()">
+        <mat-icon>school</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="togglePosts()">
+        <mat-icon>forum</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="toggleResources()">
+        <mat-icon>import_contacts</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="toggleExtras()">
+        <mat-icon>settings</mat-icon>
+      </button>
+    </mat-toolbar>
+  </p>
+  <!-- Bind to a component property to control which component to display -->
+  <div id = "container">
+    <ng-container *ngIf="resources">
+      <app-resources></app-resources>
+    </ng-container>
+    <ng-container *ngIf="posts">
+      <app-posts></app-posts>
+    </ng-container>
+    <ng-container *ngIf="calendar">
+      <app-calendar></app-calendar>
+    </ng-container>
+    <ng-container *ngIf="homework">
+      <app-homework></app-homework>
+    </ng-container>
+    <ng-container *ngIf="extras">
+      <app-extras></app-extras>
+    </ng-container>
+  </div>
+</body>
+</html>
