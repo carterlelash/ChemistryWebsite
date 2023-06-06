@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Component,OnInit } from '@angular/core';
 import * as Parse from 'parse';
 import { NestedTreeControl } from '@angular/cdk/tree';
@@ -17,7 +16,6 @@ interface TreeNode {
   templateUrl: './resources.component.html',
   styleUrls: ['./resources.component.scss']
 })
-<<<<<<< HEAD
 
 export class ResourcesComponent implements OnInit{
 	ngOnInit(){
@@ -48,8 +46,7 @@ export class ResourcesComponent implements OnInit{
 				console.log(error);
 			})
 	}
-
-export class ResourcesComponent {
+	
   testTags = [
     { name: 'Test Tag 1', selected: false },
     { name: 'Test Tag 2', selected: false },
