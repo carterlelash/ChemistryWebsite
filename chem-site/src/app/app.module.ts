@@ -18,6 +18,7 @@ import { ExtrasComponent } from './extras/extras.component';
 import {MatGridList, MatGridListModule} from '@angular/material/grid-list';
 import { HomeComponent } from './home/home.component';
 import { MatCard, MatCardModule } from '@angular/material/card';
+import { MatTreeModule } from '@angular/material/tree';
 
 // Add any other Angular Material modules you need
 
@@ -48,6 +49,7 @@ const routes: Routes = [
     MatGridListModule,
     MatCardModule,
     RouterModule.forRoot(routes),
+    MatTreeModule,
     // Add any other Angular Material modules here
   ],
   exports: [
