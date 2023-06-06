@@ -1,19 +1,16 @@
 <<<<<<< HEAD
 import { Component,OnInit } from '@angular/core';
 import * as Parse from 'parse';
+import { NestedTreeControl } from '@angular/cdk/tree';
+import { MatTreeNestedDataSource } from '@angular/material/tree';
 
 Parse.initialize('FgJsXpqyLH852BBw5DnuccJOUXLMsysjccWNcBIC', 'h6TiU187AcIgJfQN9sRXildBMvUFiIiBmUP3GtTm');
 (Parse as any).serverURL = 'https://parseapi.back4app.com/';
-=======
-import { Component } from '@angular/core';
-import { NestedTreeControl } from '@angular/cdk/tree';
-import { MatTreeNestedDataSource } from '@angular/material/tree';
 
 interface TreeNode {
   name: string;
   children?: TreeNode[];
 }
->>>>>>> dafced626f6c19942e0d22926bef39bc0e18215a
 
 @Component({
   selector: 'app-resources',
@@ -51,7 +48,7 @@ export class ResourcesComponent implements OnInit{
 				console.log(error);
 			})
 	}
-=======
+
 export class ResourcesComponent {
   testTags = [
     { name: 'Test Tag 1', selected: false },
@@ -98,7 +95,6 @@ export class ResourcesComponent {
   }
 
   hasChild = (_: number, node: TreeNode) => !!node.children && node.children.length > 0;
->>>>>>> dafced626f6c19942e0d22926bef39bc0e18215a
 }
 
 
