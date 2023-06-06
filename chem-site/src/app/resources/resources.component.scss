@@ -64,3 +64,33 @@ body {
     display: block;
   }
   
+  mat-chip {
+    background-color: red;
+    color: white;
+  }
+  
+  mat-chip.selected {
+    background-color: blue;
+    color: white;
+  }
+  
+  mat-chip.unselected {
+    background-color: red;
+    color: white;
+  }
+  details {
+    margin-top:20px;
+    margin-bottom:20px;
+    border:1px solid black;
+    border-radius:10px;
+    background-color:rgb(12, 197, 135)
+  }
+  summary {
+    color:black;
+    font-size:large;
+    font-weight:bold;
+    cursor:default;
+  }
+  #tagTitle {
+    text-align: center;
+  }

@@ -1,25 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-    <div class="grid-container">
-        <div class="grid-item grid-item-large containe"></div>
-        <div class="grid-item grid-item-medium">
-            <h1 style="font-size:xxx-large;">Resources</h1>
-            <ul id = "sourcesList">
-                <li>item 1</li>
-                <li>item 2</li>
-                <li>item 3</li>
-                <li>item 4</li>
-                <li>item 5</li>
-                <li>item 6</li>
-            </ul>
-        </div>
-      </div>
+  <div class="grid-container">
+    <div class="grid-item grid-item-large containe">
+        <h2 id = "tagTitle">Tags</h2>
+        <details>
+            <summary>Tests</summary>
+            <mat-chip-listbox>
+                <mat-chip *ngFor="let tag of testTags" [ngClass]="{'selected': tag.selected}" (click)="toggleTag(tag)">
+                  {{ tag.name }}
+                </mat-chip>
+              </mat-chip-listbox>
+        </details>
+        <details>
+            <summary>Practice</summary>
+            <mat-chip-listbox>
+                <mat-chip *ngFor="let tag of practiceTags" [ngClass]="{'selected': tag.selected}" (click)="toggleTag(tag)">
+                  {{ tag.name }}
+                </mat-chip>
+              </mat-chip-listbox>
+        </details>
+        <details>
+            <summary>Videos</summary>
+            <mat-chip-listbox>
+                <mat-chip *ngFor="let tag of videoTags" [ngClass]="{'selected': tag.selected}" (click)="toggleTag(tag)">
+                  {{ tag.name }}
+                </mat-chip>
+              </mat-chip-listbox>
+        </details>
+        <details>
+            <summary>Posters</summary>
+            <mat-chip-listbox>
+                <mat-chip *ngFor="let tag of posterTags" [ngClass]="{'selected': tag.selected}" (click)="toggleTag(tag)">
+                  {{ tag.name }}
+                </mat-chip>
+              </mat-chip-listbox>
+        </details>
+        
+          
+    </div>
+    <div class="grid-item grid-item-medium">
+      <h1 style="font-size:xxx-large;">Resources</h1>
+      <ul id="sourcesList">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+        <li>item 6</li>
+      </ul>
+    </div>
+  </div>
 </body>
+
 </html>

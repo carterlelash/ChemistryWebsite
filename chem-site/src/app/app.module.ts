@@ -19,6 +19,9 @@ import {MatGridList, MatGridListModule} from '@angular/material/grid-list';
 import { HomeComponent } from './home/home.component';
 import { MatCard, MatCardModule } from '@angular/material/card';
 import { MatTreeModule } from '@angular/material/tree';
+import { MatChip, MatChipsModule } from '@angular/material/chips';
+import { CdkTreeModule } from '@angular/cdk/tree';
+
 
 // Add any other Angular Material modules you need
 
@@ -35,7 +38,7 @@ const routes: Routes = [
     CalendarComponent,
     HomeworkComponent,
     ExtrasComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +53,8 @@ const routes: Routes = [
     MatCardModule,
     RouterModule.forRoot(routes),
     MatTreeModule,
+    MatChipsModule,
+    CdkTreeModule,
     // Add any other Angular Material modules here
   ],
   exports: [
